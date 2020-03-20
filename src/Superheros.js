@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import { connect } from 'react-redux';
 import {getSuperheros} from "./store/actions";
 import Hero from "./Hero";
-import { Button } from "antd";
+import { Card } from "antd";
 import Auxiliary from "./util/Auxiliary";
 
 class Superheros extends Component {
@@ -33,9 +33,9 @@ class Superheros extends Component {
           this.props.names && this.props.names.map((hero, index) => {
             return (
               <Auxiliary>
-                <Button className="gx-button" key={hero.id} onClick={() => {this.heroSelected(hero)}} style={{backgroundImage: `url(${hero.images.sm})`}}>
+                <Card className="gx-card" bodyStyle={{backgroundColor: "#514e4e", color: "#fff"}} key={hero.id} onClick={() => {this.heroSelected(hero)}} style={{backgroundImage: `url(${hero.images.sm})`}}>
                   {hero.name}
-                </Button>
+                </Card>
               </Auxiliary>
             )
           })
