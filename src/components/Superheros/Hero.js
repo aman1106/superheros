@@ -1,10 +1,10 @@
 import React from "react";
 import {Card, Button} from "antd";
-import Auxiliary from "./util/Auxiliary";
+import Auxiliary from "../../util/Auxiliary";
 
 const Hero = ({hero, onBack}) => (
     <Auxiliary>
-      <Card title={hero.name}
+      <Card title={<span style={{color: "#fff", fontWeight: 600, textDecoration: "underline"}}>{hero.name}</span>}
       className="App-header"
       cover={<img alt="example" src={hero.images.md} />}
       >

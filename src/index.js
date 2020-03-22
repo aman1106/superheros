@@ -6,7 +6,7 @@ import createSagaMiddleware from "redux-saga";
 import { getSuperheros } from "./store/sagas";
 
 import "./index.css";
-import App from "./App";
+import App from "./containers/App";
 import * as serviceWorker from './serviceWorker';
 import reducer from "./store/reducers";
 
