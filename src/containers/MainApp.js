@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Auxiliary from "../util/Auxiliary";
 import Superheros from '../components/Superheros/Superheros';
+import { LoadingOutlined } from '@ant-design/icons';
 import { connect } from 'react-redux';
 import {getSuperheros} from "../store/actions";
 
@@ -13,8 +14,11 @@ class MainApp extends Component {
   render() {
     return (
       <Auxiliary>
-        {this.props.loader ? <span className="loader">Loading...</span> :
-          <Superheros names={this.props.names}/>
+        {this.props.loader ?
+          <span className="loader">
+            <LoadingOutlined />Loading...
+          </span>
+          : <Superheros names={this.props.names}/>
         }
       </Auxiliary>
     )
