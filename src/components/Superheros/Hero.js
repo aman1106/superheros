@@ -5,7 +5,7 @@ import Auxiliary from "../../util/Auxiliary";
 const Hero = ({hero, onBack}) => (
     <Auxiliary>
       <Card title={<span style={{color: "#fff", fontWeight: 600, textDecoration: "underline"}}>{hero.name}</span>}
-      className="App-header"
+      className="Card-header"
       cover={<img alt="example" src={hero.images.md} />}
       >
         <div style={{fontWeight: 600, textDecoration: "underline"}}>Full Name</div>

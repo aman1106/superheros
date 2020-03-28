@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-.App-header {
+.Card-header {
   background-color: #282c34;
   min-height: 5vh;
   display: flex;
@@ -31,7 +31,28 @@
   text-align: center;
 }
 
+.searcharea {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  min-height: 50px;
+  text-align: center;
+  margin-top: 0px;
+  z-index: 99999;
+}
+
+.nomatch {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
 .superheros {
+  position: absolute;
+  top: 50px;
   margin: 0;
   padding: 0;
   list-style: none;

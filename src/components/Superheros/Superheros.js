@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Superhero from "./Superhero";
 import Hero from "./Hero";
 import { Input } from "antd";
+import nomatch from "../../nomatch.gif";
 import Auxiliary from "../../util/Auxiliary";
 
 const { Search } = Input;
@@ -42,21 +43,27 @@ class Superheros extends Component {
       <div className="page">
         {this.state.selected ? <Hero hero={this.state.selectedHero} onBack={this.onBack}/> :
         <Auxiliary>
-          <div style={{ textAlign: 'center', marginTop: 10 }}>
+          <div className="searcharea">
             <Search
+              allowClear
               placeholder="Look for superhero"
               onSearch={this.handleSearch}
               onChange={(e) => this.handleSearch(e.target.value)}
               value={this.state.value}
-              style={{ width: 200 }}
+              style={{ width: 200, marginTop: 10 }}
             />
           </div>
+          {this.state.names.length > 0 ?
           <ul className="superheros">
-            {this.state.names && this.state.names.map((hero, index) => (
+            {this.state.names.map((hero, index) => (
                 <Superhero hero={hero} heroSelected={this.heroSelected}/>
               )
             )}
-          </ul>
+          </ul> :
+          <ul className="nomatch">
+            <img src={nomatch} alt="nomatch" height="200" width="250"/>
+            Does your superhero really exists?
+          </ul>}
           </Auxiliary>
         }
       </div>
