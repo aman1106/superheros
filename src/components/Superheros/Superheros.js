@@ -60,10 +60,10 @@ class Superheros extends Component {
               )
             )}
           </ul> :
-          <ul className="nomatch">
+          <div className="nomatch">
             <img src={nomatch} alt="nomatch" height="200" width="250"/>
             Does your superhero really exists?
-          </ul>}
+          </div>}
           </Auxiliary>
         }
       </div>
